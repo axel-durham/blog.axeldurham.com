@@ -13,7 +13,5 @@ categories: media
 
 I went to Rocky Mountain Arsenal searching for a good skyline shot and found this little guy. With bison roaming the area, the Refuge asks you to stay in the car at all times here, which made framing this a challenge. Lots of inching along the road the get the prairie dog and skyline lined up here.
 
-You can enable MathJax by setting `mathjax: true` on a page or globally in the `_config.yml`. Some examples:
-
 ![Prarie Dog Closeup](assets/images/PrarieDogTown/dog_closeup.jpg)
 #### Fujifilm X-T4 | 100-400mm | f/5.6 | 1/1000s | 640 ISO
