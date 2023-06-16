@@ -1,9 +1,9 @@
 ---
-title: "About"
+title: "Hi"
 permalink: "/about/"
 layout: page
 ---
 
-## Hi.
+I'm Axel.
 
-I'm Axel. This is my corner of the internet for musings on software, photography, and whatever I'm into right now.
+This is my corner of the internet for musings on software, photography, and whatever I'm into right now.
