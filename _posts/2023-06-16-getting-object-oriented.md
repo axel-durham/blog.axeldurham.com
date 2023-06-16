@@ -56,10 +56,7 @@ public:
 
     void print()
     {
-        std::cout << "<" <<
-            m_x << ", " <<
-            m_y << ", " <<
-            m_z << ">\n";
+        std::cout << "<" << m_x << ", " << m_y << ", " << m_z << ">\n";
     }
 
     bool isEqual(Point3d point2)
