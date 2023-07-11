@@ -166,8 +166,6 @@ public:
         m_salary = salary;
     }
 };
-
-
 ```
 
 After:
@@ -197,5 +195,4 @@ public:
     {
     }
 };
-
 ```
