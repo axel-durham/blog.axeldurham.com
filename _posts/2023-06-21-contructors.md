@@ -1,5 +1,5 @@
 ---
-title:  "Constuctors"
+title:  "Constructors"
 mathjax: true
 layout: post
 categories: [coding, C++, OOP] 
