@@ -58,7 +58,47 @@ int main()
 }
 ```
 
-We likely want to be able to specify these values when we initialize our object, however.
+Similarly, we could set the default values where we define the variables.
+
+## Non-Static Member Initialization
+
+```cpp
+class Employee
+{
+private:
+    int m_id { 1 };
+    int m_salary { 30000 };
+
+public:
+    Employee()
+    {
+    }
+};
+
+int main()
+{
+    // Creates an employee with id 1, salary 30,000
+    Employee employee {};
+
+    return 0;
+}
+```
+
+Rather than writing a default constructor with an empty body, it is more clear to explicitly state this is the code.
+
+```cpp
+class Employee
+{
+private:
+    int m_id { 1 };
+    int m_salary { 30000 };
+
+public:
+    Employee() = default;
+};
+```
+
+We likely want to be able to specify member variable values when we initialize our objects.
 
 ## Constructors with Parameters
 
@@ -68,15 +108,11 @@ The code block below adds a second constructor, which can take two integer param
 class Employee
 {
 private:
-    int m_id {};
-    int m_salary {};
+    int m_id { 1 };
+    int m_salary { 30000 };
 
 public:
-    Employee()
-    {
-        m_id = 1;
-        m_salary = 30000;
-    }
+    Employee() = default;
 
     Employee(int id, int salary=30000)
     {
@@ -97,11 +133,11 @@ int main()
 }
 ```
 
-This can get repetitive, especially if we wanted to be able to use either id, salary, or both when initializing.
+Defining variables in this way is effective, except for with const variables. These must be defined on the line where they are declared, and cannot be changed. This causes a problem, as our method above sets a default value, and then overrides it. The solution is to use member initializer lists.
 
-## Non-Static Member Initialization
+## Member Initializer List
 
-The method can simplify repetitive constructors. Let's use member variables `name` and `salary` here.
+The method can also simplify repetitive constructors. Let's use member variables `name` and `salary` here.
 
 Before reduction:
 ```cpp
@@ -161,8 +197,5 @@ public:
     {
     }
 };
-
-This also makes it possible to initialize with const values.
-
 
 ```
